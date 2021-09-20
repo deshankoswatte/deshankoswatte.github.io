@@ -82,8 +82,9 @@ footer a {
     display: none;
 }
 
-.bma-coffee-small {
-    display: none;
+.theme-change-icon {
+    width: 35px;
+    height: 35px;
 }
 
 .intro .title > div {
@@ -129,14 +130,6 @@ footer a {
     }
 
     .header-link-small {
-        display: inline-block;
-    }
-
-    .bma-coffee-large {
-        display: none;
-    }
-
-    .bma-coffee-small {
         display: inline-block;
     }
 }

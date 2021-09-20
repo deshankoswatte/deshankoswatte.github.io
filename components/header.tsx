@@ -1,7 +1,31 @@
+import {useState, useEffect} from 'react';
 import React from 'react';
 import Link from 'next/link';
+import {useTheme} from "next-themes";
+import {MoonIcon, SunIcon} from "@heroicons/react/solid";
 
 export default function Header() {
+    const {systemTheme, theme, setTheme} = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, [])
+
+    const renderThemeChanger = () => {
+        if (!mounted) return null;
+
+        const currentTheme = theme === 'system' ? systemTheme : theme;
+        if (currentTheme === 'dark') {
+            return (
+                <SunIcon className="theme-change-icon" role="button" onClick={() => setTheme('light')}/>
+            );
+        } else {
+            return (
+                <MoonIcon className="theme-change-icon" role="button" onClick={() => setTheme('dark')}/>
+            )
+        }
+    }
     return (
         <header className="container">
             <h1>
@@ -13,20 +37,7 @@ export default function Header() {
                 </Link>
             </h1>
             <div>
-                <a className="bma-coffee-large" href="https://www.buymeacoffee.com/deshankoswatte">
-                    <img
-                        src="https://www.vectorlogo.zone/logos/buymeacoffee/buymeacoffee-official.svg"
-                        alt="deshan_koswatte_buy_me_a_coffee"
-                        height="200"
-                        width="200"
-                    />
-                </a>
-                <a className="bma-coffee-small" href="https://www.buymeacoffee.com/deshankoswatte">
-                    <img
-                        src="https://www.vectorlogo.zone/logos/buymeacoffee/buymeacoffee-icon.svg"
-                        alt="deshan_koswatte_buy_me_a_coffee"
-                        height="45" width="45"/>
-                </a>
+                {renderThemeChanger()}
             </div>
         </header>
     );
