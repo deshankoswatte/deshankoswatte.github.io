@@ -30,11 +30,7 @@ jobs:
 
       - name: Build and export the application
         run: npm run build
-        env:
-          NEXT_PUBLIC_BASE_PATH: /deshankoswatte.github.io
       - run: npm run export
-        env:
-          NEXT_PUBLIC_BASE_PATH: /deshankoswatte.github.io
       - run: touch ./out/.nojekyll
 
       - name: Deploy the application to GH-pages 🚀
