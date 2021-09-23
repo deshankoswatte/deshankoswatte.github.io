@@ -86,6 +86,13 @@ footer a {
     display: none;
 }
 
+.center-align-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
 .intro .title > div {
     height: 80px;
 }

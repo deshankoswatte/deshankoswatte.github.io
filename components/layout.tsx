@@ -13,7 +13,7 @@ export default function Layout({children}: LayoutProps) {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <Header/>
-            <main className="container">{children}</main>
+            <main className="container center-align-content">{children}</main>
             <Footer/>
         </>
     );

@@ -43,20 +43,22 @@ export default function Intro() {
                     height={175}
                 />
             </div>
-            <h1 className="row title">
-                <div className="col-12 col-md-6">
-                    <div className="row justify-content-center justify-content-md-end">
-                        Dehami<span>is a</span>
+            <div>
+                <h1 className="row title">
+                    <div className="col-12 col-md-6">
+                        <div className="row justify-content-center justify-content-md-end">
+                            Dehami<span>is a</span>
+                        </div>
                     </div>
-                </div>
-                <div className="col-12 col-md-6">
-                    {transitions.map(({item, props, key}) => (
-                        <animated.div className="animated-word" key={key} style={props}>
-                            {item.text}
-                        </animated.div>
-                    ))}
-                </div>
-            </h1>
+                    <div className="col-12 col-md-6">
+                        {transitions.map(({item, props, key}) => (
+                            <animated.div className="animated-word" key={key} style={props}>
+                                {item.text}
+                            </animated.div>
+                        ))}
+                    </div>
+                </h1>
+            </div>
             <h2 className="row justify-content-center">Connect with me @:</h2>
             <p>
                 <a href="mailto:dehami.deshan@gmail.com">
