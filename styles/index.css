@@ -11,6 +11,12 @@ body {
     box-sizing: border-box;
     color: #2c2c2c;
     background: #fafafa;
+    overflow-y: auto;
+}
+
+body {
+    color: var(--gray900);
+    background: var(--gray75);
 }
 
 *,
@@ -83,8 +89,10 @@ footer a {
     display: none;
 }
 
-.bma-coffee-small {
-    display: none;
+.theme-change-icon {
+    width: 30px;
+    height: 30px;
+    line-height: 0 !important;
 }
 
 .center-align-content {
@@ -147,14 +155,6 @@ footer a {
     }
 
     .header-link-small {
-        display: inline-block;
-    }
-
-    .bma-coffee-large {
-        display: none;
-    }
-
-    .bma-coffee-small {
         display: inline-block;
     }
 }
