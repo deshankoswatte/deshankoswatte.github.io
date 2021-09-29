@@ -11,7 +11,9 @@ export default function Footer() {
                     <img
                         src="https://www.vectorlogo.zone/logos/buymeacoffee/buymeacoffee-icon.svg"
                         alt="deshan_koswatte_buy_me_a_coffee"
-                        height="40" width="40"/>
+                        height="40"
+                        width="40"
+                    />
                 </a>&nbsp;
                 <a href="https://github.com/deshankoswatte/deshankoswatte.github.io">
                     <img
