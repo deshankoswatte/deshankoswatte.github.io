@@ -11,6 +11,12 @@ body {
     box-sizing: border-box;
     color: #2c2c2c;
     background: #fafafa;
+    overflow-y: auto;
+}
+
+body {
+    color: var(--gray900);
+    background: var(--gray75);
 }
 
 *,
@@ -84,8 +90,9 @@ footer a {
 }
 
 .theme-change-icon {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
+    line-height: 0 !important;
 }
 
 .center-align-content {
