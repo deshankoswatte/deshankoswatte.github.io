@@ -58,65 +58,59 @@ export default function Intro() {
                         ))}
                     </div>
                 </h1>
+                <h2 className="row justify-content-center">Connect with me @:</h2>
+                <p>
+                    <a href="mailto:dehami.deshan@gmail.com">
+                        <img
+                            className="img-large"
+                            src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg"
+                            alt="deshan_koswatte_mail"
+                        />
+                    </a>&nbsp;
+                    <a href="https://twitter.com/deshankoswatte">
+                        <img
+                            className="img-large"
+                            src="https://www.vectorlogo.zone/logos/twitter/twitter-icon.svg"
+                            alt="deshan_koswatte_twitter"
+                        />
+                    </a>&nbsp;
+                    <a href="https://lk.linkedin.com/in/deshankoswatte">
+                        <img
+                            className="img-small"
+                            src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg"
+                            alt="deshan_koswatte_linkedin"
+                        />
+                    </a>&nbsp;
+                    <a href="https://medium.com/@deshankoswatte">
+                        <img
+                            className="img-small"
+                            src="https://www.vectorlogo.zone/logos/medium/medium-tile.svg"
+                            alt="deshan_koswatte_medium"
+                        />
+                    </a>&nbsp;
+                    <a href="https://github.com/deshankoswatte">
+                        <img
+                            className="img-small"
+                            src="https://www.vectorlogo.zone/logos/github/github-icon.svg"
+                            alt="deshan_koswatte_github"
+                        />
+                    </a>&nbsp;
+                    <a href="https://stackoverflow.com/users/11383375/deshan-koswatte">
+                        <img
+                            className="img-small"
+                            src="https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-icon.svg"
+                            alt="deshan_koswatte_stackoverflow"
+                        />
+                    </a>&nbsp;
+                    <a href="https://www.facebook.com/dehami.koswatte">
+                        <img
+                            className="img-small"
+                            src="https://www.vectorlogo.zone/logos/facebook/facebook-icon.svg"
+                            alt="deshan_koswatte_facebook"
+                        />
+                    </a>
+                </p>
             </div>
-            <h2 className="row justify-content-center">Connect with me @:</h2>
-            <p>
-                <a href="mailto:dehami.deshan@gmail.com">
-                    <img
-                        src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg"
-                        alt="deshan_koswatte_mail"
-                        height="45"
-                        width="45"
-                    />
-                </a>&nbsp;
-                <a href="https://twitter.com/deshankoswatte">
-                    <img
-                        src="https://www.vectorlogo.zone/logos/twitter/twitter-icon.svg"
-                        alt="deshan_koswatte_twitter"
-                        height="45"
-                        width="45"
-                    />
-                </a>&nbsp;
-                <a href="https://lk.linkedin.com/in/deshankoswatte">
-                    <img
-                        src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg"
-                        alt="deshan_koswatte_linkedin"
-                        height="40"
-                        width="40"
-                    />
-                </a>&nbsp;
-                <a href="https://medium.com/@deshankoswatte">
-                    <img
-                        src="https://www.vectorlogo.zone/logos/medium/medium-tile.svg"
-                        alt="deshan_koswatte_medium"
-                        height="40" width="40"
-                    />
-                </a>&nbsp;
-                <a href="https://github.com/deshankoswatte">
-                    <img
-                        src="https://www.vectorlogo.zone/logos/github/github-icon.svg"
-                        alt="deshan_koswatte_github"
-                        height="40"
-                        width="40"
-                    />
-                </a>&nbsp;
-                <a href="https://stackoverflow.com/users/11383375/deshan-koswatte">
-                    <img
-                        src="https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-icon.svg"
-                        alt="deshan_koswatte_stackoverflow"
-                        height="40"
-                        width="40"
-                    />
-                </a>&nbsp;
-                <a href="https://www.facebook.com/dehami.koswatte">
-                    <img
-                        src="https://www.vectorlogo.zone/logos/facebook/facebook-icon.svg"
-                        alt="deshan_koswatte_facebook"
-                        height="40"
-                        width="40"
-                    />
-                </a>&nbsp;
-            </p>
         </div>
     );
 }

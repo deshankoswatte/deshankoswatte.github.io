@@ -52,6 +52,7 @@ header {
     justify-content: space-between;
     align-items: center;
     min-height: 100px;
+    max-height: 100px;
 }
 
 header .icon {
@@ -127,6 +128,16 @@ footer a {
 
 .intro p {
     text-align: center;
+}
+
+.img-small {
+    width: 45px;
+    height: 45px;
+}
+
+.img-large {
+    width: 50px;
+    height: 50px;
 }
 
 @media only screen and (max-width: 500px) {
