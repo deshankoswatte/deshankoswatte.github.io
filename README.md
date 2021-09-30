@@ -20,7 +20,7 @@ this [link](https://deshankoswatte.github.io).
 The following screenshots represent the mockups of the website, and the website is capable of adapting to the system
 theme(dark/white).
 
-<img align="middle" src="https://github.com/deshankoswatte/deshankoswatte.github.io/blob/main/assets/website-mockup-light.jpeg" alt="website-mockup-light"><br>
+<img align="middle" src="https://github.com/deshankoswatte/deshankoswatte.github.io/blob/main/assets/website-mockup-light.jpeg" alt="website-mockup-light"><br><br>
 <img align="middle" src="https://github.com/deshankoswatte/deshankoswatte.github.io/blob/main/assets/website-mockup-dark.jpeg" alt="website-mockup-dark">
 
 ## Prerequisites
