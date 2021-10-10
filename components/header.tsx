@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import {useTheme} from "next-themes";
 import {MoonIcon, SunIcon} from "@heroicons/react/solid";
+import {GlobeIcon} from "@heroicons/react/outline";
 
 export default function Header() {
     const {systemTheme, theme, setTheme} = useTheme();
@@ -37,6 +38,7 @@ export default function Header() {
                 </Link>
             </h1>
             <div>
+                <GlobeIcon className="explore-icon" role="button"/>&nbsp;&nbsp;
                 {renderThemeChanger()}
             </div>
         </header>
