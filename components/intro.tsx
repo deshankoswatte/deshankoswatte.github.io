@@ -43,11 +43,11 @@ export default function Intro() {
             <div>
                 <h1 className="row title">
                     <div className="col-12 col-md-6">
-                        <div className="row justify-content-center justify-content-md-end">
+                        <div className="row justify-content-center justify-content-md-end align-items-center" style={{ height: '100%' }}>
                             Dehami<span>is a</span>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-6" style={{ position: 'relative' }}>
                         <div
                             className="animated-word"
                             style={{
