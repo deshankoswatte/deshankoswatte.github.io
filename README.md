@@ -19,7 +19,7 @@ Live at **[deshankoswatte.github.io](https://deshankoswatte.github.io)**
 
 | Tool | Version | Purpose |
 |---|---|---|
-| [Next.js](https://nextjs.org) | 14.2.35 | Framework |
+| [Next.js](https://nextjs.org) | 15.5.18 | Framework |
 | [React](https://react.dev) | 18 | UI |
 | [next-themes](https://github.com/pacocoursey/next-themes) | 0.3 | Dark mode |
 | [@heroicons/react](https://heroicons.com) | 2.x | Icons |
@@ -68,7 +68,7 @@ This site is deployed as a **fully static export** (no server, no middleware). B
 - Server Component CVEs **do not apply** — the site uses the Pages Router with static generation
 - Image cache CVEs **do not apply** — the built output is flat HTML/CSS/JS with no running Next.js server
 
-Next.js is pinned to **14.2.35** (the latest fully-patched 14.x release). The only remaining `npm audit` flag is against the `next` package itself for server-mode features this site doesn't use.
+Next.js is pinned to **15.5.18** (the latest fully-patched 14.x release). The only remaining `npm audit` flag is against the `next` package itself for server-mode features this site doesn't use.
 
 ---
 
