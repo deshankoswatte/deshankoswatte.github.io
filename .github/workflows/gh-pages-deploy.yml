@@ -1,41 +1,40 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node and deploy the application to github pages.
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions.
+# Builds and deploys the site to GitHub Pages on every push to main.
+# For more information see: https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-nodejs
 
-name: GH-pages deploy workflow
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  build:
-
+  build-and-deploy:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [ 14.x ]
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '20.x'
+          cache: 'npm'
 
-      - name: Install the required packages
-        run: npm ci
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
 
-      - name: Build and export the application
+      - name: Build static export
         run: npm run build
-      - run: npm run export
-      - run: touch ./out/.nojekyll
 
-      - name: Deploy the application to GH-pages 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+      - name: Add .nojekyll
+        run: touch ./out/.nojekyll
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.8.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: out # The folder the action should deploy.
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: out

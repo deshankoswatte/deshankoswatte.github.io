@@ -1,12 +1,11 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import Link from 'next/link';
-import {useTheme} from "next-themes";
-import {MoonIcon, SunIcon} from "@heroicons/react/solid";
-import {GlobeIcon} from "@heroicons/react/outline";
+import { useTheme } from "next-themes";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 
 export default function Header() {
-    const {systemTheme, theme, setTheme} = useTheme();
+    const { systemTheme, theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
@@ -19,26 +18,21 @@ export default function Header() {
         const currentTheme = theme === 'system' ? systemTheme : theme;
         if (currentTheme === 'dark') {
             return (
-                <SunIcon className="theme-change-icon" role="button" onClick={() => setTheme('light')}/>
+                <SunIcon className="theme-change-icon" role="button" onClick={() => setTheme('light')} />
             );
         } else {
             return (
-                <MoonIcon className="theme-change-icon" role="button" onClick={() => setTheme('dark')}/>
+                <MoonIcon className="theme-change-icon" role="button" onClick={() => setTheme('dark')} />
             )
         }
     }
     return (
         <header className="container">
             <h1>
-                <Link href="/">
-                    <a className="header-link-large">Dehami Koswatte</a>
-                </Link>
-                <Link href="/">
-                    <a className="header-link-small">DehamiK</a>
-                </Link>
+                <Link href="/" className="header-link-large">Dehami Koswatte</Link>
+                <Link href="/" className="header-link-small">DehamiK</Link>
             </h1>
             <div>
-                <GlobeIcon className="explore-icon" role="button"/>&nbsp;&nbsp;
                 {renderThemeChanger()}
             </div>
         </header>

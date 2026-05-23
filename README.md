@@ -1,93 +1,111 @@
-# deshankoswatte.github.io
+# 🌐 deshankoswatte.github.io
 
-## Table of Contents
+My personal portfolio website — a clean, minimal single-page site with a dark mode toggle and animated role text.
 
-- [About](#about)
-- [Prerequisites](#prerequisites)
-- [Getting Started with the Project](#getting-started-with-the-project)
-    - [Learn More](#learn-more)
-        - [Deploy on Vercel](#deploy-on-vercel)
-- [Contributing](#contributing)
-- [License](#license)
+Live at **[deshankoswatte.github.io](https://deshankoswatte.github.io)**
 
-## About
+---
 
-This repository contains a [Next.js](https://nextjs.org/) project bootstrapped
-with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). **_It was created as a
-web portfolio for [Dehami Koswatte](https://github.com/deshankoswatte)_**. The web portfolio can be accessed through
-this [link](https://deshankoswatte.github.io).
+## ✨ Features
 
-The following screenshots represent the mockups of the website, and the website is capable of adapting to the system
-theme(dark/white).
+- 🌙 **Dark / Light mode** — respects your system preference, with a toggle in the header
+- 🔄 **Animated role text** — cycles through titles like *SW Engineer*, *Developer*, *Open Source Fan*, and more using smooth CSS transitions
+- 📱 **Responsive** — works on mobile and desktop
+- ⚡ **Static export** — fully pre-rendered HTML, no server needed
 
-<img align="middle" src="https://github.com/deshankoswatte/deshankoswatte.github.io/blob/main/assets/website-mockup-light.jpeg" alt="website-mockup-light"><br><br>
-<img align="middle" src="https://github.com/deshankoswatte/deshankoswatte.github.io/blob/main/assets/website-mockup-dark.jpeg" alt="website-mockup-dark">
+---
 
-## Prerequisites
+## 🛠️ Tech Stack
 
-- [Node](https://nodejs.org/en/download/) 14.17.x.
-- [Node Package Manager](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) 6.14.x.
+| Tool | Version | Purpose |
+|---|---|---|
+| [Next.js](https://nextjs.org) | 14.2.35 | Framework |
+| [React](https://react.dev) | 18 | UI |
+| [next-themes](https://github.com/pacocoursey/next-themes) | 0.3 | Dark mode |
+| [@heroicons/react](https://heroicons.com) | 2.x | Icons |
+| TypeScript | 5.x | Type safety |
 
-## Getting Started with the Project
+---
 
-First, install the required dependencies using:
+## 🚀 Getting Started
 
-```bash
-npm install
-# or
-yarn
-```
-
-Next, run the development server:
+**Prerequisites:** Node.js 18+
 
 ```bash
+# 1. Clone the repo
+git clone https://github.com/deshankoswatte/deshankoswatte.github.io.git
+cd deshankoswatte.github.io
+
+# 2. Install dependencies
+npm install --legacy-peer-deps
+
+# 3. Start the dev server
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the website locally.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed
-on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited
-in `pages/api/hello.ts`.
+## 📦 Building & Deploying
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated
-as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+# Build a production static export
+npm run build
 
-### Learn More
+# The output is in the `out/` folder — ready to deploy anywhere
+```
 
-To learn more about Next.js, take a look at the following resources:
+The site is automatically deployed to GitHub Pages via the workflow in `.github/workflows/gh-pages-deploy.yml` whenever you push to `main`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-Check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions will be
-welcomed!
+## 🔒 Security Notes
 
-#### Deploy on Vercel
+This site is deployed as a **fully static export** (no server, no middleware). Because of this:
 
-The easiest way to deploy a Next.js app is to use
-the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js. Yet, this website is deployed through [GitHub Pages](https://pages.github.com/).
+- Middleware-based CVEs (e.g. CVE-2025-29927) **do not apply** — no middleware is executed at runtime
+- Server Component CVEs **do not apply** — the site uses the Pages Router with static generation
+- Image cache CVEs **do not apply** — the built output is flat HTML/CSS/JS with no running Next.js server
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js is pinned to **14.2.35** (the latest fully-patched 14.x release). The only remaining `npm audit` flag is against the `next` package itself for server-mode features this site doesn't use.
 
-## Contributing
+---
 
-Contributions make the open source community such an amazing place to learn, inspire, and create. Any contribution you
-make to this project is **greatly appreciated**.
+## 📁 Project Structure
 
-1. Fork the Project.
-2. Create your Feature Branch (`git checkout -b feature/NewFeature`).
-3. Commit your Changes (`git commit -m 'Add some NewFeature'`).
-4. Push to the Branch (`git push origin feature/NewFeature`).
-5. Open a Pull Request.
+```
+├── assets/             # Profile picture and screenshots
+├── components/
+│   ├── header.tsx      # Nav bar with dark mode toggle
+│   ├── footer.tsx      # Copyright + links
+│   ├── intro.tsx       # Main content + animated text
+│   └── layout.tsx      # Page wrapper
+├── pages/
+│   └── index.tsx       # Entry point
+├── styles/
+│   ├── index.css       # Global styles
+│   ├── theme.css       # CSS variables (light + dark)
+│   └── bootstrap-grid.css  # Minimal grid layout
+└── public/             # Static assets (favicon, etc.)
+```
 
-## License
+---
 
-Distributed under the MIT License.
-See [LICENSE](https://github.com/deshankoswatte/deshankoswatte.github.io/blob/main/LICENSE)
-for more information.
+## 🙋 Connect
+
+| Platform | Link |
+|---|---|
+| Email | [dehami.deshan@gmail.com](mailto:dehami.deshan@gmail.com) |
+| Twitter | [@deshankoswatte](https://twitter.com/deshankoswatte) |
+| LinkedIn | [deshankoswatte](https://lk.linkedin.com/in/deshankoswatte) |
+| GitHub | [@deshankoswatte](https://github.com/deshankoswatte) |
+| Medium | [@deshankoswatte](https://medium.com/@deshankoswatte) |
+| Stack Overflow | [deshan-koswatte](https://stackoverflow.com/users/11383375/deshan-koswatte) |
+
+---
+
+<p align="center">
+  <i>Copyright © Dehami Koswatte 2021 – present</i><br/>
+  <a href="https://www.buymeacoffee.com/deshankoswatte">☕ Buy me a coffee</a>
+</p>
