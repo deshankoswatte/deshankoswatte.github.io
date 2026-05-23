@@ -103,17 +103,6 @@ footer a {
     width: 100%;
 }
 
-.intro .title > div {
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-
-.intro h1 {
-    font-size: 50px;
-    margin: 0;
-}
-
 .intro h2 {
     font-size: 40px;
     letter-spacing: -2px;
@@ -125,19 +114,24 @@ footer a {
     border-radius: 50%;
 }
 
-.intro .title span {
-    color: #6e6e6e;
-    margin: 0 1rem;
-}
-
-.intro .animated-word {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
+.title-row {
     display: flex;
     align-items: center;
-    line-height: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    gap: 0.25em;
+    line-height: 1.2;
+}
+
+.title-isa {
+    color: #6e6e6e;
+}
+
+.animated-word {
+    display: inline-block;
 }
 
 .intro p {

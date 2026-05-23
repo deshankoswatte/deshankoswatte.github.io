@@ -41,25 +41,20 @@ export default function Intro() {
                 />
             </div>
             <div>
-                <h1 className="row title">
-                    <div className="col-12 col-md-6">
-                        <div className="row justify-content-center justify-content-md-end align-items-center" style={{ height: '100%' }}>
-                            Dehami<span>is a</span>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-6" style={{ position: 'relative' }}>
-                        <div
-                            className="animated-word"
-                            style={{
-                                color: current.color,
-                                opacity: visible ? 1 : 0,
-                                transform: visible ? 'translateY(0)' : 'translateY(-20px)',
-                                transition: 'opacity 0.35s ease, transform 0.35s ease',
-                            }}
-                        >
-                            {current.text}
-                        </div>
-                    </div>
+                <h1 className="title-row">
+                    <span className="title-static">Dehami</span>
+                    <span className="title-isa">is a</span>
+                    <span
+                        className="animated-word"
+                        style={{
+                            color: current.color,
+                            opacity: visible ? 1 : 0,
+                            transform: visible ? 'translateY(0)' : 'translateY(-20px)',
+                            transition: 'opacity 0.35s ease, transform 0.35s ease',
+                        }}
+                    >
+                        {current.text}
+                    </span>
                 </h1>
                 <h2 className="row justify-content-center">Connect with me @:</h2>
                 <p>
