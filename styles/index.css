@@ -89,14 +89,10 @@ footer a {
     display: none;
 }
 
-.explore-icon {
-    width: 30px;
-    height: 30px;
-}
-
 .theme-change-icon {
     width: 30px;
     height: 30px;
+    cursor: pointer;
     line-height: 0 !important;
 }
 
@@ -137,6 +133,8 @@ footer a {
     top: 0;
     left: 0;
     bottom: 0;
+    display: flex;
+    align-items: center;
 }
 
 .intro p {
@@ -154,7 +152,6 @@ footer a {
 }
 
 @media only screen and (max-width: 500px) {
-
     .header-link-large {
         display: none;
     }
@@ -168,5 +165,6 @@ footer a {
     .intro .animated-word {
         right: 0;
         text-align: center;
+        justify-content: center;
     }
 }
